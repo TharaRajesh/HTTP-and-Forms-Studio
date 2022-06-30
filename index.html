@@ -4,17 +4,13 @@
 	<meta charset="utf-8">
 	<script>
 		function setSearchEngine(){
-			let selectedEngine = document.querySelector("input[name=engine]:checked").value;
-
+			let selectedEngine = document.querySelector('input[name=engine]:checked').value;
 			let actionUrl = actions[selectedEngine];
 			let form = document.getElementById("searchForm");
-			form.setAttribute("action", actionUrl);
-			// // console.log("it's running");
-			
+			form.setAttribute("action", actionUrl);			
 		}
 	    window.addEventListener("load", function(){
-			const form = document.getElementById("searchForm");
-			
+			const form = document.getElementById("searchForm");			
 			form.addEventListener("submit",setSearchEngine())
       });
 
@@ -27,14 +23,13 @@
 	</script>
 </head>
 
-
 <body>
 	<form id="searchForm">
 	<input type="text" name="q"/>
-	<label><input type = "radio" name = "engine" value = "google"/>Google </label>
-	<label><input type = "radio" name = "engine" value = "duckDuckGo"/>DuckDuckGo </label>
-	<label><input type = "radio" name = "engine" value = "bing"/>Bing </label>
-	<label><input type = "radio" name = "engine" value = "ask"/>Ask </label>
+	<label><input type = "radio" name = "engine" value = "google" checked="true" onclick="setSearchEngine()"/>Google </label>
+	<label><input type = "radio" name = "engine" value = "duckDuckGo" onclick="setSearchEngine()"/>DuckDuckGo </label>
+	<label><input type = "radio" name = "engine" value = "bing" onclick="setSearchEngine()"/>Bing </label>
+	<label><input type = "radio" name = "engine" value = "ask" onclick="setSearchEngine()"/>Ask </label>
 	<button>GO!</button>
 	</form>
 </body>
