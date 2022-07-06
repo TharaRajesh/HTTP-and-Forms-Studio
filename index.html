@@ -11,14 +11,14 @@
 		}
 	    window.addEventListener("load", function(){
 			const form = document.getElementById("searchForm");			
-			form.addEventListener("submit",setSearchEngine())
+			form.addEventListener("submit",setSearchEngine);
       });
 
 	  let actions = {
-       google: "https://www.google.com/",
-       duckDuckGo : "https://duckduckgo.com/",
-       bing : "https://www.bing.com/search",
-       ask : "https://www.ask.com/web"
+       "google": "https://www.google.com/",
+       "duckDuckGo" : "https://duckduckgo.com/",
+       "bing" : "https://www.bing.com/search",
+       "ask" : "https://www.ask.com/web"
 };
 	</script>
 </head>
@@ -26,10 +26,10 @@
 <body>
 	<form id="searchForm">
 	<input type="text" name="q"/>
-	<label><input type = "radio" name = "engine" value = "google" checked="true" onclick="setSearchEngine()"/>Google </label>
-	<label><input type = "radio" name = "engine" value = "duckDuckGo" onclick="setSearchEngine()"/>DuckDuckGo </label>
-	<label><input type = "radio" name = "engine" value = "bing" onclick="setSearchEngine()"/>Bing </label>
-	<label><input type = "radio" name = "engine" value = "ask" onclick="setSearchEngine()"/>Ask </label>
+	<label><input type = "radio" name = "engine" value = "google" />Google </label>
+	<label><input type = "radio" name = "engine" value = "duckDuckGo" />DuckDuckGo </label>
+	<label><input type = "radio" name = "engine" value = "bing" />Bing </label>
+	<label><input type = "radio" name = "engine" value = "ask"/>Ask </label>
 	<button>GO!</button>
 	</form>
 </body>
